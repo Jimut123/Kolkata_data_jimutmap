@@ -1,5 +1,5 @@
 
-# Mumbai coordinates : Lat 18.88 to 19.30 and Lon 72.75 to 73.14
+# Chennai coordinates : Lat 12.77 to 13.28 and Lon 80.10 to 80.35
 
 import os
 import glob
@@ -7,10 +7,10 @@ import shutil
 from jimutmap import api, sanity_check
 
 
-download_obj = api(min_lat_deg = 18.88,
-                      max_lat_deg = 19.30,
-                      min_lon_deg = 72.75,
-                      max_lon_deg = 73.14,
+download_obj = api(min_lat_deg = 12.77,
+                      max_lat_deg = 13.28,
+                      min_lon_deg = 80.10,
+                      max_lon_deg = 80.35,
                       zoom = 19,
                       verbose = False,
                       threads_ = 60,
@@ -24,19 +24,19 @@ download_obj = api(min_lat_deg = 18.88,
 download_obj.download(getMasks = True)
 
 # create the object of class jimutmap's api
-sanity_obj = api(min_lat_deg = 18.88,
-                      max_lat_deg = 19.30,
-                      min_lon_deg = 72.75,
-                      max_lon_deg = 73.14,
+sanity_obj = api(min_lat_deg = 12.77,
+                      max_lat_deg = 13.28,
+                      min_lon_deg = 80.10,
+                      max_lon_deg = 80.35,
                       zoom = 19,
                       verbose = False,
                       threads_ = 60,
                       container_dir = "myOutputFolder")
 
-sanity_check(min_lat_deg = 18.88,
-                max_lat_deg = 19.30,
-                min_lon_deg = 72.75,
-                max_lon_deg = 73.14,
+sanity_check(min_lat_deg = 12.77,
+                max_lat_deg = 13.28,
+                min_lon_deg = 80.10,
+                max_lon_deg = 80.35,
                 zoom = 19,
                 verbose = False,
                 threads_ = 60,
@@ -64,5 +64,3 @@ try:
             shutil.rmtree(item)
 except OSError as e:
     print ("Error: %s - %s." % (e.filename, e.strerror))
-
-
