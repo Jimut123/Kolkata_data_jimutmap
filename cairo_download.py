@@ -1,4 +1,4 @@
-# Download data for Delhi, lat: 28.4 to 28.8 and Lon: 76.92 to 77.47
+# Download data for Montreal Area
 
 import os
 import glob
@@ -6,10 +6,10 @@ import shutil
 from jimutmap import api, sanity_check
 
 
-download_obj = api(min_lat_deg = 28.4,
-                      max_lat_deg = 28.8,
-                      min_lon_deg = 76.92,
-                      max_lon_deg = 77.47,
+download_obj = api(min_lat_deg = 28,
+                      max_lat_deg = 32,
+                      min_lon_deg = 28,
+                      max_lon_deg = 32,
                       zoom = 19,
                       verbose = False,
                       threads_ = 50,
@@ -25,19 +25,19 @@ download_obj.download(getMasks = True)
 while(True):
     try:
         # create the object of class jimutmap's api
-        sanity_obj = api(min_lat_deg = 28.4,
-                            max_lat_deg = 28.8,
-                            min_lon_deg = 76.92,
-                            max_lon_deg = 77.47,
+        sanity_obj = api(min_lat_deg = 28,
+                            max_lat_deg = 32,
+                            min_lon_deg = 28,
+                            max_lon_deg = 32,
                             zoom = 19,
                             verbose = False,
                             threads_ = 50,
                             container_dir = "myOutputFolder")
 
-        sanity_check(min_lat_deg = 28.4,
-                        max_lat_deg = 28.8,
-                        min_lon_deg = 76.92,
-                        max_lon_deg = 77.47,
+        sanity_check(min_lat_deg = 28,
+                        max_lat_deg = 32,
+                        min_lon_deg = 28,
+                        max_lon_deg = 32,
                         zoom = 19,
                         verbose = False,
                         threads_ = 50,
