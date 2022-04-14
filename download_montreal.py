@@ -22,7 +22,7 @@ download_obj = api(min_lat_deg = 43,
 # getMasks = False if you just need the tiles
 download_obj.download(getMasks = True)
 
-while(true):
+while(True):
     try:
         # create the object of class jimutmap's api
         sanity_obj = api((min_lat_deg = 43,
